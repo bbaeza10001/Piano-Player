@@ -1,0 +1,4 @@
+START 
+1
+-100 50 37 37 Medic.png
+ENDF

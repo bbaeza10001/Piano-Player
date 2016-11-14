@@ -1,0 +1,5 @@
+START
+DOOR
+1
+-45 100 80 10 3 1 Basic_Wall.png
+ENDF

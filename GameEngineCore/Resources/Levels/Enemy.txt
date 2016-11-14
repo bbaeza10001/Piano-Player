@@ -1,0 +1,5 @@
+START
+1
+100 10 37 37 BaseEnemy.png
+200 50 37 37 BaseEnemy.png
+ENDF

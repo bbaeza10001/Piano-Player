@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B08EFE46-48FB-4871-805B-96EF0A888E14}</ProjectGuid>
+    <RootNamespace>GameEngineCore</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\FreeImage\include;$(SolutionDir)Dependencies\SFML\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\GLFW\lib-vc2013;$(SolutionDir)Dependencies\GLEW\Lib;$(SolutionDir)Dependencies\FreeImage\lib;$(SolutionDir)Dependencies\SFML\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$Bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$Bin\$(Configuration)\Intermediates\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)Dependencies\GLFW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\GLFW\lib-vc2013;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glu32.lib;glfw3.lib;opengl32.lib;glew32s.lib;FreeImage.lib;sfml-audio-s-d.lib;sfml-system-s-d.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>/NODEFAULTLIB:msvcrt;/NODEFAULTLIB:libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\objects\Inventory.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\graphics\bg_Texture.cpp" />
+    <ClCompile Include="src\graphics\LoadLevel.cpp" />
+    <ClCompile Include="src\graphics\lodepng.cpp" />
+    <ClCompile Include="src\graphics\Window.cpp" />
+    <ClCompile Include="src\Input\Button.cpp" />
+    <ClCompile Include="src\Input\InputController.cpp" />
+    <ClCompile Include="src\Items\BaseItem.cpp" />
+    <ClCompile Include="src\motion\MotionController.cpp" />
+    <ClCompile Include="src\motion\Orbits.cpp" />
+    <ClCompile Include="src\objects\BaseEnemy.cpp" />
+    <ClCompile Include="src\objects\BaseEntity.cpp" />
+    <ClCompile Include="src\objects\BaseMedic.cpp" />
+    <ClCompile Include="src\objects\BaseObject.cpp" />
+    <ClCompile Include="src\objects\BG.cpp" />
+    <ClCompile Include="src\objects\Bullet.cpp" />
+    <ClCompile Include="src\objects\CircleObject.cpp" />
+    <ClCompile Include="src\objects\Door.cpp" />
+    <ClCompile Include="src\objects\MeleeEnemy.cpp" />
+    <ClCompile Include="src\objects\PlayerObject.cpp" />
+    <ClCompile Include="src\objects\Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\objects\Inventory.h" />
+    <ClInclude Include="src\graphics\bg_Texture.h" />
+    <ClInclude Include="src\graphics\LoadLevel.h" />
+    <ClInclude Include="src\graphics\lodepng.h" />
+    <ClInclude Include="src\include\Includes.h" />
+    <ClInclude Include="src\Input\Button.h" />
+    <ClInclude Include="src\Input\InputController.h" />
+    <ClInclude Include="src\graphics\Window.h" />
+    <ClInclude Include="src\Items\BaseItem.h" />
+    <ClInclude Include="src\motion\MotionController.h" />
+    <ClInclude Include="src\motion\Orbits.h" />
+    <ClInclude Include="src\objects\BaseEnemy.h" />
+    <ClInclude Include="src\objects\BaseEntity.h" />
+    <ClInclude Include="src\objects\BaseMedic.h" />
+    <ClInclude Include="src\objects\BaseObject.h" />
+    <ClInclude Include="src\objects\BG.h" />
+    <ClInclude Include="src\objects\Bullet.h" />
+    <ClInclude Include="src\objects\CircleObject.h" />
+    <ClInclude Include="src\objects\Door.h" />
+    <ClInclude Include="src\objects\MeleeEnemy.h" />
+    <ClInclude Include="src\objects\PlayerObject.h" />
+    <ClInclude Include="src\objects\Wall.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\Base_Bullet.png" />
+    <Image Include="Resources\Images\BG.png" />
+    <Image Include="Resources\Images\start_screen.png" />
+    <Image Include="Resources\Images\FloorTile1.png" />
+    <Image Include="Resources\Images\Inventory.png" />
+    <Image Include="Resources\Images\MeleeEnemy.png" />
+    <Image Include="Resources\Images\Multi-Layer.png" />
+    <Image Include="Resources\Images\empty_button.png" />
+    <Image Include="Resources\Images\Basic_Wall.png" />
+    <Image Include="Resources\Images\BaseEnemy.png" />
+    <Image Include="Resources\Images\Medic.png" />
+    <Image Include="Resources\Images\clock_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\Levels\Enemy.txt" />
+    <Text Include="Resources\Levels\Doors.txt" />
+    <Text Include="Resources\Levels\Medics.txt" />
+    <Text Include="Resources\Levels\MeleeEnemy.txt" />
+    <Text Include="Resources\Levels\Wall.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio\Piano_Tones\a1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\a1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\b1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\c1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\c1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\c2.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\d1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\d1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\e1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\f1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\f1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\g1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\g1s.ogg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\graphics\bg_Texture.cpp" />
+    <ClCompile Include="src\graphics\LoadLevel.cpp" />
+    <ClCompile Include="src\graphics\lodepng.cpp" />
+    <ClCompile Include="src\graphics\Window.cpp" />
+    <ClCompile Include="src\Input\Button.cpp" />
+    <ClCompile Include="src\Input\InputController.cpp" />
+    <ClCompile Include="src\motion\MotionController.cpp" />
+    <ClCompile Include="src\motion\Orbits.cpp" />
+    <ClCompile Include="src\objects\BaseEnemy.cpp" />
+    <ClCompile Include="src\objects\BaseMedic.cpp" />
+    <ClCompile Include="src\objects\BaseObject.cpp" />
+    <ClCompile Include="src\objects\BG.cpp" />
+    <ClCompile Include="src\objects\Bullet.cpp" />
+    <ClCompile Include="src\objects\CircleObject.cpp" />
+    <ClCompile Include="src\objects\Door.cpp" />
+    <ClCompile Include="src\objects\MeleeEnemy.cpp" />
+    <ClCompile Include="src\objects\PlayerObject.cpp" />
+    <ClCompile Include="src\objects\Wall.cpp" />
+    <ClCompile Include="src\objects\BaseEntity.cpp" />
+    <ClCompile Include="src\Items\BaseItem.cpp" />
+    <ClCompile Include="src\objects\Inventory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\graphics\bg_Texture.h" />
+    <ClInclude Include="src\graphics\LoadLevel.h" />
+    <ClInclude Include="src\graphics\lodepng.h" />
+    <ClInclude Include="src\include\Includes.h" />
+    <ClInclude Include="src\Input\Button.h" />
+    <ClInclude Include="src\Input\InputController.h" />
+    <ClInclude Include="src\graphics\Window.h" />
+    <ClInclude Include="src\motion\MotionController.h" />
+    <ClInclude Include="src\motion\Orbits.h" />
+    <ClInclude Include="src\objects\BaseEnemy.h" />
+    <ClInclude Include="src\objects\BaseMedic.h" />
+    <ClInclude Include="src\objects\BaseObject.h" />
+    <ClInclude Include="src\objects\BG.h" />
+    <ClInclude Include="src\objects\Bullet.h" />
+    <ClInclude Include="src\objects\CircleObject.h" />
+    <ClInclude Include="src\objects\Door.h" />
+    <ClInclude Include="src\objects\MeleeEnemy.h" />
+    <ClInclude Include="src\objects\PlayerObject.h" />
+    <ClInclude Include="src\objects\Wall.h" />
+    <ClInclude Include="src\objects\BaseEntity.h" />
+    <ClInclude Include="src\Items\BaseItem.h" />
+    <ClInclude Include="src\objects\Inventory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\BaseEnemy.png" />
+    <Image Include="Resources\Images\Basic_Wall.png" />
+    <Image Include="Resources\Images\BG.png" />
+    <Image Include="Resources\Images\Medic.png" />
+    <Image Include="Resources\Images\MeleeEnemy.png" />
+    <Image Include="Resources\Images\Multi-Layer.png" />
+    <Image Include="Resources\Images\FloorTile1.png" />
+    <Image Include="Resources\Images\Inventory.png" />
+    <Image Include="Resources\Images\Base_Bullet.png" />
+    <Image Include="Resources\Images\clock_arrow.png" />
+    <Image Include="Resources\Images\start_screen.png" />
+    <Image Include="Resources\Images\empty_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\Levels\Doors.txt" />
+    <Text Include="Resources\Levels\Enemy.txt" />
+    <Text Include="Resources\Levels\Medics.txt" />
+    <Text Include="Resources\Levels\MeleeEnemy.txt" />
+    <Text Include="Resources\Levels\Wall.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio\Piano_Tones\a1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\a1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\b1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\c1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\c1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\c2.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\d1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\d1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\e1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\f1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\f1s.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\g1.ogg" />
+    <None Include="Resources\Audio\Piano_Tones\g1s.ogg" />
+  </ItemGroup>
+</Project>
